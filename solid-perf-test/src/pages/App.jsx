@@ -1,5 +1,5 @@
-import { View } from "@lightningjs/solid";
-import { useFocusManager } from "@lightningjs/solid-primitives";
+import { View } from "@lightningtv/solid";
+import { useFocusManager } from "@lightningtv/solid/primitives";
 
 const App = (props) => {
   useFocusManager({

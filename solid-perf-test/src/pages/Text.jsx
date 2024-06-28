@@ -1,4 +1,4 @@
-import { Text, View } from '@lightningjs/solid';
+import { Text, View } from '@lightningtv/solid';
 
 const TextPage = () => {
   const OverviewContainer = {

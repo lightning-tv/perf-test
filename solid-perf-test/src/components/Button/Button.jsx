@@ -1,4 +1,4 @@
-import { View, Text } from '@lightningjs/solid';
+import { View, Text } from '@lightningtv/solid';
 
 /**
  * Primary UI component for user interaction

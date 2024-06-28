@@ -1,6 +1,6 @@
-import { NodeStyles, Text, View } from '@lightningjs/solid';
+import { NodeStyles, Text, View } from '@lightningtv/solid';
 import { createSignal } from 'solid-js';
-import { Row, Button } from '@lightningjs/solid-ui';
+import { Row, Button } from '@lightningtv/solid-ui';
 
 const TextPage = () => {
   const [counter, setCounter] = createSignal(0);

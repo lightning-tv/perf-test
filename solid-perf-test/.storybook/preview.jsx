@@ -1,5 +1,5 @@
-import { render } from '@lightningjs/solid';
-import { useFocusManager } from '@lightningjs/solid-primitives';
+import { render } from '@lightningtv/solid';
+import { useFocusManager } from '@lightningtv/solid-primitives';
 import coreExtensionModuleUrl from '../src/AppCoreExtensions.js?importChunkUrl';
 
 const RenderOptions = {

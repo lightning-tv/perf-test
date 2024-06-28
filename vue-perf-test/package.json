@@ -1,0 +1,67 @@
+{
+  "name": "vue-demo-app",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Lightning renderer for vue custom renderer",
+  "type": "module",
+  "scripts": {
+    "start": "vite --open --host --force",
+    "start:prod": "vite --open --host --force --mode production",
+    "build": "vite build --sourcemap=true",
+    "build:github": "vite build --sourcemap=true --base=/vue-demo-app/",
+    "build:github:dev": "NODE_ENV=development vite build --sourcemap=true --mode development --base=/vue-demo-app/",
+    "build:analyze": "vite-bundle-visualizer",
+    "deploy": "gh-pages -d dist",
+    "preview": "vite preview --open --port 8080",
+    "tsc": "tsc",
+    "lint:prettier": "prettier --check \"**/*.{ts,js,cjs,md,tsx}\"",
+    "lint:fix:prettier": "prettier --write \"**/*.{ts,js,cjs,md,tsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lightning",
+    "javascript",
+    "canvas",
+    "vue",
+    "web",
+    "tv"
+  ],
+  "author": "Chris Lorenzo",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@lightningtv/vite-hex-transform": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ],
+    "*.{js,cjs,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@lightningjs/renderer": "^0.9.4",
+    "@lightningjs/vite-plugin-import-chunk-url": "^0.3.1",
+    "@lightningtv/vue": "^0.1.0",
+    "@vue/reactivity": "^3.4.29",
+    "@vue/runtime-core": "^3.4.29",
+    "@vue/shared": "^3.4.29",
+    "vue": "^3.4.29",
+    "vue-debounce": "^5.0.0",
+    "vue-router": "^4.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightning-tv/vue.git"
+  }
+}

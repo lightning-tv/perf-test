@@ -1,4 +1,4 @@
-import { render, Config } from '@lightningjs/solid';
+import { render, Config } from '@lightningtv/solid';
 import { HashRouter, Route } from "@solidjs/router";
 import App from './pages/App';
 import HelloWorld from './pages/HelloWorld';

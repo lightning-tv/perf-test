@@ -1,4 +1,4 @@
-import { Text, View, hexColor } from '@lightningjs/solid';
+import { Text, View, hexColor } from '@lightningtv/solid';
 import { For, createSignal } from 'solid-js';
 
 function random(min, max) {

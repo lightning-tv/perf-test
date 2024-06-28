@@ -1,5 +1,5 @@
 import Button from '../components/Button/Button';
-import { Row } from '@lightningjs/solid-ui';
+import { Row } from '@lightningtv/solid-ui';
 
 const ButtonsPage = () => {
   function onEnter(event, elm) {

@@ -16,7 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { render as solidRender, Canvas } from '@lightningjs/solid';
+import { render as solidRender, Canvas } from '@lightningtv/solid';
 
 const RenderOptions = {
   rootId: document.createElement('div')
