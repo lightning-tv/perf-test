@@ -1,10 +1,10 @@
 import { createApp, Config } from '@lightningtv/vue';
-import App from './App.vue';
+import Perf from './Perf.vue';
 import coreExtensionModuleUrl from './AppCoreExtensions.js?importChunkUrl';
-import router from './router';
+//import router from './router';
 
 const logFps = false;
-Config.debug = true;
+Config.debug = false;
 Config.animationsEnabled = true;
 Config.fontSettings.fontFamily = 'Roboto';
 Config.fontSettings.color = 0xf6f6f6ff;
@@ -12,11 +12,10 @@ Config.fontSettings.fontSize = 32;
 Config.rendererOptions = {
   coreExtensionModule: coreExtensionModuleUrl,
   fpsUpdateInterval: logFps ? 200 : 0,
-  enableInspector: true,
+  enableInspector: false,
   // deviceLogicalPixelRatio: 1
 };
 
-createApp(App).then(({app, rootNode}) => {
-  app.use(router);
+createApp(Perf).then(({app, rootNode}) => {
   app.mount(rootNode);
 });

@@ -9,6 +9,9 @@ export default defineConfig({
   plugins: [
     hexColorTransform(),
     importChunkUrl(),
+    vueJsx({
+      isCustomElement: (tag) => ['node', 'view', 'text'].includes(tag),
+    }),
     vue({
       template: {
         compilerOptions: {
@@ -16,7 +19,6 @@ export default defineConfig({
         },
       },
     }),
-   vueJsx(),
   ],
   build: {
     rollupOptions: {
