@@ -1,9 +1,10 @@
 <template>
     <node ref="blockContainer">
-        <node v-for="block in blocks" v-bind="block"></node>
+        <FunTile v-for="block in blocks" :data="block"></FunTile>
     </node>
   </template>
   
+  // <node v-for="block in blocks" v-bind="block"></node>
   <script setup>
   import { ref, onMounted, markRaw } from 'vue';
   import Tile from './components/Tile.vue';

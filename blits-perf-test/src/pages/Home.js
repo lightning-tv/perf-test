@@ -15,7 +15,7 @@ const WIDTH = 800
 export default Blits.Application({
   template: `
     <Element w="1920" h="1080" color="#f0f0f0">
-      <Element
+      <Tile
         :for="item in $items"
         :width="$item.width"
         :height="$item.height"
@@ -39,7 +39,6 @@ export default Blits.Application({
     init() {
       setInterval(() => {
         const _blocks = []
-        const color = generateRandomHexColor();
         // If you want to test tear down and full recreate you need to remove the key prop
         for (let step = 0; step < 1000; step++) {
           _blocks.push({
@@ -49,7 +48,7 @@ export default Blits.Application({
             x: random(0, WIDTH),
             y: random(0, HEIGHT),
             radius: random(0, 50),
-            color: color, //generateRandomHexColor(),
+            color: generateRandomHexColor(),
           })
         }
         this.items = _blocks

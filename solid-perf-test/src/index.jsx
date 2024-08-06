@@ -1,6 +1,4 @@
-import { render, Config } from '@lightningtv/solid';
-import { HashRouter, Route } from "@solidjs/router";
-import App from './pages/App';
+import { createRenderer, Config } from '@lightningtv/solid';
 import HelloWorld from './pages/HelloWorld';
 // import TextPage from './pages/Text';
 // import CounterPage from './pages/Counter';
@@ -19,6 +17,7 @@ Config.rendererOptions = {
   // deviceLogicalPixelRatio: 1
 };
 
+const {render} = createRenderer();
 render(() =>  (
   <HelloWorld />
 ));
