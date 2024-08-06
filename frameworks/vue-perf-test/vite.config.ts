@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { importChunkUrl } from '@lightningjs/vite-plugin-import-chunk-url';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import hexColorTransform from "@lightningtv/vite-hex-transform";
@@ -8,7 +7,6 @@ import hexColorTransform from "@lightningtv/vite-hex-transform";
 export default defineConfig({
   plugins: [
     hexColorTransform(),
-    importChunkUrl(),
     vueJsx({
       isCustomElement: (tag) => ['node', 'view', 'text'].includes(tag),
     }),
@@ -20,6 +18,7 @@ export default defineConfig({
       },
     }),
   ],
+  base: '',
   build: {
     rollupOptions: {
       input: {

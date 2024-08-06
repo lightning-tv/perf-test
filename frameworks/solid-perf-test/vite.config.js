@@ -9,6 +9,7 @@ export default defineConfig({
       generate: 'universal',
     },
   })],
+  base: '',
   resolve: {
     alias: {
       theme: '@lightningjs/l3-ui-theme-base',
