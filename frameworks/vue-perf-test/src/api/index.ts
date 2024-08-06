@@ -1,4 +1,4 @@
-import API_KEY_V4 from './key';
+import API_KEY_V4 from './key.js';
 const API_BASE = 'https://api.themoviedb.org/3';
 let tmdbConfig;
 let baseImageUrl;

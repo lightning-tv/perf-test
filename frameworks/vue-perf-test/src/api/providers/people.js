@@ -1,5 +1,5 @@
-import api, { getImageUrl } from '..';
-import { convertItemsToTiles } from '../formatters/ItemFormatter';
+import api, { getImageUrl } from '../index.js';
+import { convertItemsToTiles } from '../formatters/ItemFormatter.js';
 
 export function minutesToHMM(minutes) {
   const hours = Math.floor(minutes / 60);
