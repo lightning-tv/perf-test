@@ -1,9 +1,10 @@
 import Blits from '@lightningjs/blits'
-import Tile from '../components/Tile.js'
 
 function generateRandomHexColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16)
 }
+
+const generateRandomColor = () => '0x' + Math.floor(Math.random() * 16777215).toString(16) + 'FF';
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
@@ -12,27 +13,24 @@ function random(min, max) {
 const HEIGHT = 600
 const WIDTH = 800
 
-export default Blits.Application({
+export default Blits.Component('Home', {
   template: `
     <Element w="1920" h="1080" color="#f0f0f0">
-      <Tile
+      <Element
         :for="item in $items"
-        :width="$item.width"
-        :height="$item.height"
+        :w="$item.width"
+        :h="$item.height"
         :x="$item.x"
         :y="$item.y"
         :color="$item.color"
-        :effects="[$shader('radius', {radius: $item.radius})]"
+        :effects="[{type: 'radius', props: {radius: $item.radius}}]"
         key="$item.key"
       />
     </Element>
   `,
-  components: {
-    Tile,
-  },
   state() {
     return {
-      items: [],
+      items: new Array(),
     }
   },
   hooks: {
@@ -48,7 +46,7 @@ export default Blits.Application({
             x: random(0, WIDTH),
             y: random(0, HEIGHT),
             radius: random(0, 50),
-            color: generateRandomHexColor(),
+            color: generateRandomColor(),
           })
         }
         this.items = _blocks
