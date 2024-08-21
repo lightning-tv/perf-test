@@ -39,13 +39,15 @@ const HelloWorld = () => {
     <View style={{color: hexColor('#f0f0f0')}}>
       <Show when={blocks().length > 0}>
         <View ref={blockContainer}>
-            <Index each={blocks()}>{(props) => <node {/*@once*/ ...props} />}</Index>
+          <Index each={blocks()}>{(item) => <node x={/*once*/ item().x} y={/*@once*/ item().y} width={/*@once*/ item().width} height={/*@once*/ item().height} color={/*@once*/ item().color} borderRadius={/*@once*/ item().borderRadius} />}</Index>
         </View>
       </Show>
     </View>
   );
 };
-
+// <For each={blocks()}>{(item) => <node x={/*once*/ item.x} y={/*@once*/ item.y} width={/*@once*/ item.width} height={/*@once*/ item.height} color={/*@once*/ item.color} borderRadius={/*@once*/ item.borderRadius} />}</For>
+// <node x={item().x} y={item().y} width={item().width} height={item().height} color={item().color} borderRadius={item().borderRadius} />
+// <node x={/*once*/ item().x} y={/*@once*/ item().y} width={/*@once*/ item().width} height={/*@once*/ item().height} color={/*@once*/ item().color} borderRadius={/*@once*/ item().borderRadius} />
 export default HelloWorld;
 
 const HEIGHT = 600;
