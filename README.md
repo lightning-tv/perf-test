@@ -6,11 +6,11 @@ Hosted version: https://lightning-tv.github.io/perf-test/
 
 ## Results
 
-Blits: 1160ms
-![Blits Results](official_results/blits.png)
-
-Solid: 65ms
+Solid: <10ms
 ![Solid Results](official_results/solid.png)
+
+Blits: 56ms
+![Blits Results](official_results/blits.png)
 
 Vue: 89ms
 ![Vue Results](official_results/vue.png)
