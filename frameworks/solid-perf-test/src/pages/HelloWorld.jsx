@@ -37,11 +37,7 @@ const HelloWorld = () => {
 
   return (
     <View style={{color: hexColor('#f0f0f0')}}>
-      <Show when={blocks().length > 0}>
-        <View ref={blockContainer}>
-          <Index each={blocks()}>{(item) => <node x={/*once*/ item().x} y={/*@once*/ item().y} width={/*@once*/ item().width} height={/*@once*/ item().height} color={/*@once*/ item().color} borderRadius={/*@once*/ item().borderRadius} />}</Index>
-        </View>
-      </Show>
+      <Index each={blocks()}>{(item) => <node x={/*once*/ item().x} y={/*@once*/ item().y} width={/*@once*/ item().width} height={/*@once*/ item().height} color={/*@once*/ item().color} borderRadius={/*@once*/ item().borderRadius} />}</Index>
     </View>
   );
 };

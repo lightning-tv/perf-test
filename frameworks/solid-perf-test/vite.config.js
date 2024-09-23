@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
-import { importChunkUrl } from '@lightningjs/vite-plugin-import-chunk-url';
 
 export default defineConfig({
-  plugins: [importChunkUrl(), solidPlugin({
+  plugins: [solidPlugin({
     solid: {
       moduleName: "@lightningtv/solid",
       generate: 'universal',
@@ -23,6 +22,7 @@ export default defineConfig({
     '@lightningtv/solid-primitives',
     '@lightningtv/solid-ui',
     '@lightningjs/renderer/core',
+    '@lightningjs/renderer/webgl',
     '@lightningjs/renderer/workers/renderer']
   },
   server: {

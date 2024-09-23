@@ -1,5 +1,6 @@
 import { createRenderer, Config } from '@lightningtv/solid';
 import HelloWorld from './pages/HelloWorld';
+import { WebGlCoreRenderer } from '@lightningjs/renderer/webgl';
 // import TextPage from './pages/Text';
 // import CounterPage from './pages/Counter';
 // import ButtonsPage from './pages/ButtonsPage';
@@ -14,6 +15,8 @@ Config.rendererOptions = {
   //coreExtensionModule: coreExtensionModuleUrl,
   numImageWorkers: 2,
   enableInspector: false,
+  renderEngine: WebGlCoreRenderer,
+  fontEngines: [],
   // deviceLogicalPixelRatio: 1
 };
 
