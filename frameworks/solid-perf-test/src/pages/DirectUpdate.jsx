@@ -33,16 +33,16 @@ const DirectUpdate = () => {
       }
 
       setBlocks(_blocks);
-    }
-
-    // Direct updating
-    for (let step = 0; step < 1000; step++) {
-      let c = blockContainer.children[step];
-      c.width = random(50, 100);
-      c.height = random(50, 100);
-      c.x = random(0, WIDTH);
-      c.y = random(0, HEIGHT);
-      c.color = generateRandomColor();
+    } else {
+      // Direct updating
+      for (let step = 0; step < 1000; step++) {
+        let c = blockContainer.children[step];
+        c.width = random(50, 100);
+        c.height = random(50, 100);
+        c.x = random(0, WIDTH);
+        c.y = random(0, HEIGHT);
+        c.color = generateRandomColor();
+      }
     }
   };
 
