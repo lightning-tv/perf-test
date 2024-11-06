@@ -3,6 +3,7 @@ import { HashRouter } from "@lightningtv/solid/primitives";
 import { Route } from "@solidjs/router";
 import DirectUpdate from "./pages/DirectUpdate";
 import TilePage from "./pages/Tile";
+import TileOnePage from "./pages/TileOne";
 import MapPage from "./pages/Map";
 import IndexPage from "./pages/Index";
 import ForPage from "./pages/For";
@@ -28,6 +29,7 @@ render(() => (
   <HashRouter root={(props) => <App {...props} />}>
     <Route path="" component={DirectUpdate} />
     <Route path="tile" component={TilePage} />
+    <Route path="tileone" component={TileOnePage} />
     <Route path="for" component={ForPage} />
     <Route path="map" component={MapPage} />
     <Route path="index" component={IndexPage} />
