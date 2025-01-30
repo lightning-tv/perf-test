@@ -28,6 +28,7 @@ const DirectUpdate = () => {
           height: random(50, 100),
           x: random(0, WIDTH),
           y: random(0, HEIGHT),
+          borderRadius: random(0, 50),
           color: generateRandomColor(),
         });
       }
@@ -41,6 +42,7 @@ const DirectUpdate = () => {
         c.height = random(50, 100);
         c.x = random(0, WIDTH);
         c.y = random(0, HEIGHT);
+        c.effects = { radius: { radius: random(0, 50) } };
         c.color = generateRandomColor();
       }
     }

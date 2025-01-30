@@ -36,6 +36,21 @@ export default Blits.Component("Home", {
   },
   hooks: {
     init() {
+      const _blocks = [];
+      // If you want to test tear down and full recreate you need to remove the key prop
+      for (let step = 0; step < 1000; step++) {
+        _blocks.push({
+          key: step,
+          width: random(50, 100),
+          height: random(50, 100),
+          x: random(0, WIDTH),
+          y: random(0, HEIGHT),
+          radius: 5,
+          color: generateRandomColor(),
+        });
+      }
+      this.items = _blocks;
+
       setInterval(() => {
         const _blocks = [];
         // If you want to test tear down and full recreate you need to remove the key prop
