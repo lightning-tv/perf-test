@@ -1,15 +1,12 @@
 import { Text, View, hexColor } from "@lightningtv/solid";
 import { Index, Show, createSignal, onCleanup } from "solid-js";
-
+import { generateRandomColor } from "../util";
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 const HEIGHT = 600;
 const WIDTH = 800;
-
-const generateRandomColor = () =>
-  (0xff000000 | Math.floor(Math.random() * 0xffffff)) >>> 0;
 
 const MapPage = () => {
   const [blocks, setBlocks] = createSignal([]);
