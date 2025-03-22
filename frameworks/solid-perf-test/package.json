@@ -17,18 +17,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@lightningjs/renderer": "^2.9.1",
-    "@lightningtv/solid": "^2.6.3",
+    "@lightningjs/renderer": "2.12.1",
+    "@lightningtv/solid": "^2.7.12",
     "@solidjs/router": "^0.15.3",
-    "solid-js": "^1.9.4"
+    "solid-js": "^1.9.5"
   },
   "devDependencies": {
-    "@vitest/browser": "^3.0.4",
+    "@vitest/browser": "^3.0.9",
     "jsdom": "^26.0.0",
-    "vite": "^6.0.11",
+    "vite": "^6.2.2",
     "vite-bundle-visualizer": "^1.2.1",
     "vite-plugin-cross-origin-isolation": "^0.1.6",
-    "vite-plugin-solid": "^2.11.0",
-    "vitest": "^3.0.4"
+    "vite-plugin-solid": "^2.11.6",
+    "vitest": "^3.0.9"
   }
 }

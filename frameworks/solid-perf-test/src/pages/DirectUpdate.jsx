@@ -42,7 +42,7 @@ const DirectUpdate = () => {
         c.height = random(50, 100);
         c.x = random(0, WIDTH);
         c.y = random(0, HEIGHT);
-        c.effects = { radius: { radius: random(0, 50) } };
+        //c.effects = { radius: { radius: random(0, 50) } };
         c.color = generateRandomColor();
       }
     }
@@ -57,10 +57,10 @@ const DirectUpdate = () => {
   });
 
   return (
-    <View ref={blockContainer} style={{ color: hexColor("#f0f0f0") }}>
+    <View ref={blockContainer} color={hexColor("#f0f0f0")}>
       <Index each={blocks()}>
         {(item) => (
-          <node
+          <View
             x={item().x}
             y={item().y}
             width={item().width}

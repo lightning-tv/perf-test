@@ -21,27 +21,31 @@ const ForPage = () => {
     // To tear down and recreate uncomment next line
     // setBlocks([]);
 
-    for (let step = 0; step < 1000; step++) {
-      _blocks.push({
-        width: random(50, 100),
-        height: random(50, 100),
-        x: random(0, WIDTH),
-        y: random(0, HEIGHT),
-        color: generateRandomColor(),
-      });
+    if (blocks().length === 0) {
+      for (let step = 0; step < 1000; step++) {
+        _blocks.push({
+          width: random(50, 100),
+          height: random(50, 100),
+          x: random(0, WIDTH),
+          y: random(0, HEIGHT),
+          color: generateRandomColor(),
+        });
+      }
+
+      setBlocks(_blocks);
+    } else {
+      // Direct updating
+      const updateBlocks = blocks();
+      for (let step = 0, length = updateBlocks.length; step < 1000; step++) {
+        let c = updateBlocks[step];
+        c.width = random(50, 100);
+        c.height = random(50, 100);
+        c.x = random(0, WIDTH);
+        c.y = random(0, HEIGHT);
+        c.color = generateRandomColor();
+      }
+      setBlocks([...updateBlocks]);
     }
-
-    setBlocks(_blocks);
-
-    // Direct updating
-    // for (let step = 0; step < 1000; step++) {
-    //   let c = blockContainer.children[step];
-    //   c.width = random(50, 100);
-    //   c.height = random(50, 100);
-    //   c.x = random(0, WIDTH);
-    //   c.y = random(0, HEIGHT);
-    //   c.color = generateRandomColor();
-    // }
   };
 
   const interval = setInterval(() => {
@@ -56,7 +60,7 @@ const ForPage = () => {
     <View ref={blockContainer} style={{ color: hexColor("#f0f0f0") }}>
       <For each={blocks()}>
         {(item) => (
-          <node
+          <View
             x={item.x}
             y={item.y}
             width={item.width}

@@ -9,6 +9,7 @@
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix",
     "build": "vite build",
+    "build:analyze": "vite-bundle-visualizer",
     "preview": "vite preview --open --port 8080",
     "dev": "vite dev --host"
   },
@@ -23,15 +24,16 @@
     }
   },
   "devDependencies": {
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.4.2",
-    "vite": "^6.0.11"
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "vite": "^6.2.2",
+    "vite-bundle-visualizer": "^1.2.1"
   },
   "dependencies": {
-    "@lightningjs/blits": "^1.17.1"
+    "@lightningjs/blits": "^1.23.2"
   }
 }
